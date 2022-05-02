@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  smart-hue:
+    build: .
+    container_name: smart-hue-service
+    ports:
+      - 8778:8778
+    volumes:
+    - .:/usr/src/app
+    - /usr/src/app/node_modules
