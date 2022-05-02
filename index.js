@@ -77,7 +77,8 @@ const humanPresenceLivingRoomSubscription = humanPresenceLivingRoom.pipe(
         } else {
             //stop the timer
             console.log('stopping timer to turn off lamps');
-            turnOffLampsTimerSubscription.unsubscribe();
+            if(turnOffLampsTimerSubscription)
+                turnOffLampsTimerSubscription.unsubscribe();
         }
 
     },
